@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="page-header">Twitter Aggregator {{getTweetCount()}}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="text-center">Tweets</h2>
+            <tweet-list [tweets]="tweets"></tweet-list>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <h2 class="text-center">Top words</h2>
+            <bar-graph [labels]="topWords" [data]="topWordsCount"></bar-graph>
+        </div>
+        <div class="col-xs-6">
+            <h2 class="text-center">Top hashtags</h2>
+            <bar-graph [labels]="topHashtags" [data]="topHashtagsCount"></bar-graph>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="text-center">Tweets over time</h2>
+            <line-graph [data]="tweetsOverTime"></line-graph>
+        </div>
+    </div>
+</div>

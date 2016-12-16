@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello Angular 2!</title>
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import ('built/pomodoro-timer')
+        .then(null, console.error.bind(console));
+    </script>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <strong class="navbar-brand">My Pomodoro Timer</strong>
+        </div>
+      </div>
+    </nav>
+    <pomodoro-timer></pomodoro-timer>
+  </body>
+</html>

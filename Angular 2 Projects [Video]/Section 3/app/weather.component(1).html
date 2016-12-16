@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="col-xs-12 weather-component">
+        <h2 *ngIf="!weatherExists()">Loading...</h2>
+        <h2 *ngIf="weatherExists()">Current conditions in {{weather.city}}:</h2>
+        <div *ngIf="weatherExists()" class="weather">
+            {{weather.temperature}}°C
+            <i class="wi wi-yahoo-{{weather.code}}"></i>
+        </div>
+    </div>
+</div>

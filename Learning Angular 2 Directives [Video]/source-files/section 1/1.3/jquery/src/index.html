@@ -1,0 +1,35 @@
+<html>
+<head>
+
+    <style>
+        strong {
+            font-size: 35px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="hello-world-cmp"></div>
+
+    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+
+    <script>
+        //jquery component code
+        $.fn.helloWorld  = function(options) {
+          return this.each(function() {
+             $(this).append('<p>Hello <strong>' + options.who + '</strong></p>');
+          });
+        };
+    </script>
+
+    <script>
+        //bootstrap component
+        $('#hello-world-cmp').helloWorld({
+            who: 'World'
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+@import "../bower_components/weather-icons/sass/weather-icons.scss";
+
+body {
+    background-color: #FDFDFD;
+    font-family: 'Arima Madurai', cursive;
+}
+
+h1 {
+    color: #236FA6;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.city-list {
+    font-size: 24px;
+    text-align: center;
+
+    a > div {
+        &:first-child {
+            margin-top: 1em;
+            padding-right: 1em;
+            text-align: right;
+        }
+        &:last-child {
+            padding-left: 1em;
+            text-align: left;
+        }
+    }
+
+    .row {
+        margin-top: 0.5em;
+    }
+
+    img {
+        border-radius: 100%;
+    }
+}
+
+.no-link {
+    text-decoration: none !important;
+}
+
+.weather-component {
+    font-size: 40px;
+    text-align: center;
+
+    h2, .weather {
+        margin-top: 1em;
+    }
+}

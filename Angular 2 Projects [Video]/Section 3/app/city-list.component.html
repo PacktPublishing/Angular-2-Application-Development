@@ -1,0 +1,14 @@
+<div class="row city-list">
+    <div class="col-xs-12">
+        <div class="row well" *ngFor="let city of cities">
+            <a [routerLink]="['weather', city.woeId]">
+                <div class="col-xs-6">
+                    {{city.name}}
+                </div>
+                <div class="col-xs-6">
+                    <img class="city-image" src={{city.imageSrc}} height="80" width="80" />
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-xs-12">
+        <form class="form-inline">
+            <div class="form-group">
+                <input class="form-control" [(ngModel)]="searchTerm" [ngModelOptions]="{standalone: true}" placeholder="Search">
+            </div>
+            <button class="btn btn-default" (click)="clearSearchTerm()">Clear</button>
+        </form>
+    </div>
+</div>
+<div class="tweet-list">
+    <table class="table">
+        <tbody>
+            <tr *ngFor="let tweet of (tweets | tweetFilter: searchTerm)"><td>{{tweet.date | moment}}</td><td>{{tweet.text}}</td></tr>
+        </tbody>
+    </table>
+</div>

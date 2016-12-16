@@ -1,0 +1,10 @@
+
+node_modules
+**/bower_packages
+**/jspm_packages
+**/typings
+
+*.log
+
+app/**/*.js
+app/**/*.js.map
